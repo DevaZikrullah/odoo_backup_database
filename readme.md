@@ -14,5 +14,5 @@ pip install requests
 ```
 Run 
 ```sh
-python odoo-backup.py --url http://localhost:8069/web/database/backup --master_pwd admin123 --name hij --backup_format zip --backup_file_path backup_database.zip
+python odoo-backup.py --url http://localhost:8069/web/database/backup --master_pwd admin123 --name_db hij --backup_format zip --backup_file_path backup_database.zip
 ```

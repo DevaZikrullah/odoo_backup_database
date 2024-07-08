@@ -7,7 +7,7 @@ parser = argparse.ArgumentParser(description="Download Odoo database backup")
 # Add arguments
 parser.add_argument("--url", type=str, required=True, help="URL for the backup endpoint")
 parser.add_argument("--master_pwd", type=str, required=True, help="Master password")
-parser.add_argument("--name", type=str, required=True, help="Database name")
+parser.add_argument("--name_db", type=str, required=True, help="Database name")
 parser.add_argument("--backup_format", type=str, choices=['zip', 'dump'], default='zip', help="Backup format (zip or dump)")
 parser.add_argument("--backup_file_path", type=str, default='depo_backup.zip', help="Path to save the backup file")
 
@@ -16,7 +16,7 @@ args = parser.parse_args()
 
 form_data = {
     'master_pwd': args.master_pwd,
-    'name': args.name,
+    'name': args.name_db,
     'backup_format': args.backup_format
 }
 
